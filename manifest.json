@@ -1,0 +1,15 @@
+{
+  "name": "GeoCalcul 3r ESO",
+  "short_name": "GeoCalcul",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0077b6",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3421/3421379.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

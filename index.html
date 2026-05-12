@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoCalcul - 3r ESO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0077b6">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>📐 GeoCalcul 3r ESO</h1>
+        <p>Tria una figura i calcula el que et falti</p>
+    </header>
+
+    <main class="container">
+        <section class="selector-area">
+            <label for="polygon-select">Quina figura vols estudiar?</label>
+            <select id="polygon-select">
+                <option value="">-- Selecciona --</option>
+                <option value="pitagoras">Teorema de Pitàgores</option>
+                <option value="rectangle">Rectangle / Romboide</option>
+                <option value="triangle">Triangle</option>
+                <option value="trapezi">Trapezi</option>
+                <option value="cercle">Cercle</option>
+            </select>
+        </section>
+
+        <section id="display-area" class="hidden">
+            <div class="info-card">
+                <div id="figure-visual" class="visual"></div>
+                <div class="formulas">
+                    <h3>Fórmules</h3>
+                    <p id="formula-text"></p>
+                </div>
+            </div>
+
+            <div class="calculator-card">
+                <h3>Calculadora Interactiva</h3>
+                <p class="instruction">Omple les dades que coneguis i deixa en blanc la que vulguis calcular.</p>
+                <div id="inputs-container"></div>
+                <button id="calc-btn">Calcula el valor buit</button>
+                <button id="reset-btn" class="secondary">Neteja</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
